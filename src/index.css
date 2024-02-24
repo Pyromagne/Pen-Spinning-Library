@@ -10,6 +10,10 @@ html{
   @apply hideout
 }
 
+a {
+  color: cadetblue;
+}
+
 body {
   margin: 0;
   font-family: Roboto;

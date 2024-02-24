@@ -3,7 +3,7 @@ import { Typography } from "@mui/material";
 import Navbar from "../components/Navbar";
 import ResponsiveYoutube from "../components/ResponsiveYoutube";
 import Footer from "../components/Footer";
-import * as Desc from "../desc";
+import * as Desc from "../data/desc";
 import fs from "../assets/images/Penspinning_slots.jpg";
 
 const videoId = 'voqYX8_VjvQ';

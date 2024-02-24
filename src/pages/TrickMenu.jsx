@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Typography } from "@mui/material";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import * as Data from "../data";
+import * as Data from "../data/tricks";
 import {svg, getRandomSvg} from "../assets/svgs/svg";
 import randomColor from "randomcolor";
 import { useNavigate } from "react-router-dom";
