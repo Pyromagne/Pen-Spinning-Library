@@ -1,4 +1,4 @@
-export const trickCategoryL = ['sonics','charges','passes','wipers','arounds','spins','Aerial','other/advance'];
+export const trickCategoryL = ['sonics','charges','passes','wipers','arounds','spins','aerials','other & advance'];
 
 export const sonics = ['sonic','sonic reverse','twisted sonic','twisted sonic reverse','inverse sonic','inverse sonic reverse','sonic clip','sonic clip reverse','neosonic','neosonic reverse','sonic rise','sonic fall','in out sonic','in out sonic reverse','out in sonic','warped sonic','pseudo sonic','pseudo sonic reverse'];
 

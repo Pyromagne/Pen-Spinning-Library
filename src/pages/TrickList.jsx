@@ -5,9 +5,14 @@ import Footer from "../components/Footer";
 import * as Data from "../data/tricks";
 import { useNavigate } from "react-router-dom";
 import DiffChip from "../components/DiffChip";
-import sonic from "../data/sonicsData";
-import charge from "../data/chargesData";
-import pass from "../data/passesData";
+import sonic from "../data/tricks/sonicsData";
+import charge from "../data/tricks/chargesData";
+import pass from "../data/tricks/passesData";
+import around from "../data/tricks/aroundsData";
+import spin from "../data/tricks/spinsData";
+import wiper from "../data/tricks/wipersData";
+import aerial from "../data/tricks/aerialsData";
+import otherAdvance from "../data/tricks/otherAdvance";
 
 const TrickCategory = ({cat}) => {
 
@@ -21,6 +26,21 @@ const TrickCategory = ({cat}) => {
     }
     else if(cat === 'passes') {
         category = pass;
+    }
+    else if(cat === 'arounds') {
+        category = around;
+    }
+    else if (cat === 'spins') {
+        category = spin;
+    }
+    else if (cat === 'wipers') {
+        category = wiper;
+    }
+    else if (cat === 'aerials') {
+        category = aerial;
+    }
+    else if (cat === 'other & advance') {
+        category = otherAdvance;
     }
 
 

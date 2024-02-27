@@ -6,9 +6,9 @@ import TrickList from './pages/TrickList';
 import TrickTutorial from './pages/TrickTutorial';
 import TrickMenu from './pages/TrickMenu';
 import * as Data from "./data/tricks";
-import sonic from './data/sonicsData';
-import charge from './data/chargesData';
-import pass from './data/passesData';
+import sonic from './data/tricks/sonicsData';
+import charge from './data/tricks/chargesData';
+import pass from './data/tricks/passesData';
 
 function App() {
   return (
