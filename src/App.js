@@ -14,9 +14,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="home" element={<Home />} />
-      <Route path="tutorial" element={<Tutorial />}/>
-      <Route path="tricks" element={<TrickMenu />}/>
+      <Route path="/home" element={<Home />} />
+      <Route path="/tutorial" element={<Tutorial />}/>
+      <Route path="/tricks" element={<TrickMenu />}/>
 
       {Data.trickCategoryL.map((cat, index) => (
         <Route path={`tricks/${cat}`} key={index} element={<TrickList cat={cat}/>}/>
@@ -28,15 +28,15 @@ function App() {
       */}
 
       {sonic.map((trick, index) => (
-        <Route path={`tutorial/${trick.name}`} key={index} element={<TrickTutorial trick={trick}/>}/>
+        <Route path={`/tutorial/${trick.name}`} key={index} element={<TrickTutorial trick={trick}/>}/>
       ))}
 
       {charge.map((trick, index) =>(
-        <Route path={`tutorial/${trick.name}`} key={index} element={<TrickTutorial trick={trick}/>}/>
+        <Route path={`/tutorial/${trick.name}`} key={index} element={<TrickTutorial trick={trick}/>}/>
       ))}
 
       {pass.map((trick, index) =>(
-        <Route path={`tutorial/${trick.name}`} key={index} element={<TrickTutorial trick={trick}/>}/>
+        <Route path={`/tutorial/${trick.name}`} key={index} element={<TrickTutorial trick={trick}/>}/>
       ))}
 
       {/*
