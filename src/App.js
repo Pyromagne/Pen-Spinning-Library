@@ -14,9 +14,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/tutorial" element={<Tutorial />}/>
-      <Route path="/tricks" element={<TrickMenu />}/>
+      <Route path="home" element={<Home />} />
+      <Route path="tutorial" element={<Tutorial />}/>
+      <Route path="tricks" element={<TrickMenu />}/>
 
       {Data.trickCategoryL.map((cat, index) => (
         <Route path={`/tricks/${cat}`} key={index} element={<TrickList cat={cat}/>}/>
