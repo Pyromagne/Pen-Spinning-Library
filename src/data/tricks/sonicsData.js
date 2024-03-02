@@ -1,4 +1,12 @@
-const _shoeman6 = 'https://www.youtube.com/channel/UC9wCVO5TfJHU4ocnbQ5dnag';
+const auth1 = 'shoeman6';
+const _auth1 = 'https://www.youtube.com/channel/UC9wCVO5TfJHU4ocnbQ5dnag';
+
+const auth2 = 'KTrinh93'
+const _auth2 = 'https://www.youtube.com/@KTrinh93';
+
+const auth3 = 'Pen Stock';
+const _auth3 = 'https://www.youtube.com/@PenStock'
+
 const cat = 'sonic';
 
 export const sonicData = {
@@ -6,18 +14,21 @@ export const sonicData = {
     category: 'sonic',
     diff: 'a',
     tLink : 'ueeZ3W7DIQo',
-    tAuthor : ['shoeman6',_shoeman6],
+    tAuthor : [auth1,_auth1],
     tAlt : [
         ['https://youtu.be/zducgDQPwl4?list=PLkjj8ogaxbBWNubdTZhoGLzytgCeGWLU5', 'Eso (Lefty)'],
-        ['https://www.youtube.com/watch?v=lNeTo-uUd2k','KTrinh93'],
-        ['https://www.youtube.com/watch?v=UQi5Atd-Gn0&t=2s','Pen Stock']
+        ['https://www.youtube.com/watch?v=lNeTo-uUd2k',auth2],
+        ['https://www.youtube.com/watch?v=UQi5Atd-Gn0&t=2s',auth3]
     ],
 };
 
 export const sonicReverseData = {
     name: 'sonic reverse',
     category: 'sonic',
-    diff: 'a'
+    diff: 'a',
+    tLink: '5nh_cXf71l8',
+    tAuthor: [auth2,_auth2],
+    tAlt: [],
 };
 
 export const twistedSonicData = {
