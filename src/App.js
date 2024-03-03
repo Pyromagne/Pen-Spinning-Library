@@ -9,9 +9,17 @@ import * as Data from "./data/tricks";
 import sonic from './data/tricks/sonicsData';
 import charge from './data/tricks/chargesData';
 import pass from './data/tricks/passesData';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import { useStateContext } from './context/contextProvider';
 
 function App() {
+
+  const {isHome} = useStateContext();
+
   return (
+    <>
+    <Navbar isHome={isHome}/>
     <Routes>
       <Route index element={<Home />} />
       <Route path="tutorial" element={<Tutorial />}/>
@@ -22,8 +30,9 @@ function App() {
       ))}
 
       {/* 
-        //TODO
-        in this code the map function generate hidden path for the 'cat' in tricks data which is the first index of the data, it must be fix
+        //TODO (FUTURE UPDATE)
+        - in this code the map function generate hidden path for the 'cat' in tricks data which is the first index of the data, it must be fix
+        - use parameterized url (better)
       */}
 
       {sonic.map((trick, index) => (
@@ -45,6 +54,8 @@ function App() {
       <Route path="*" element={<Home />}/>
 
     </Routes>
+    <Footer />
+  </>
   );
 }
 

@@ -38,7 +38,6 @@ const Trick = () => {
 
     return(
         <>
-        <Navbar></Navbar>
         <div className="flex w-full h-full mt-20 justify-center items-center flex-col">
         <Typography variant="h4" className="capitalize">Category</Typography>
             <div className="w-4/5 flex flex-wrap justify-center">
@@ -51,7 +50,6 @@ const Trick = () => {
                 ))}
             </div>
         </div>
-        <Footer></Footer>
         </>
     )
 }

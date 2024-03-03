@@ -1,16 +1,24 @@
-import React from "react"
+import {React, useEffect} from "react"
 import { Typography } from "@mui/material";
 import Navbar from "../components/Navbar";
 import ResponsiveYoutube from "../components/ResponsiveYoutube";
 import Footer from "../components/Footer";
 import * as Desc from "../data/desc";
 import fs from "../assets/images/Penspinning_slots.jpg";
+import {useStateContext} from "../context/contextProvider";
 
 const videoId = 'voqYX8_VjvQ';
 const Home = () => {
+
+    const {setIsHome} = useStateContext(false);
+
+    useEffect(() => {
+        setIsHome(true);
+        return () => setIsHome(false);
+      }, []);
+
     return(
         <>
-            <Navbar isHome={true} />
             <div className="flex flex-col w-full h-full justify-center items-center gap-10">
                 <div className="w-full md:h-96 h-80 flex justify-center items-center tictactoe">
                     <p className="text-5xl text-white text-center">PEN SPINNING LIBRARY</p>
@@ -52,7 +60,6 @@ const Home = () => {
                     <ResponsiveYoutube videoId={videoId}/>
                 </div>
             </div>
-            <Footer></Footer>
         </>
     )
 }

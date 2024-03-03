@@ -60,7 +60,6 @@ const TrickCategory = ({cat}) => {
 
     return(
         <>
-        <Navbar></Navbar>
         <div className="flex w-full h-full mt-20 justify-center items-center flex-col gap-4">
             <Typography variant="h4" className="capitalize">{category[0]} Tricks</Typography>
             <div className="w-4/5 grid md:grid-cols-2 gap-1 gap-x-8">
@@ -72,7 +71,6 @@ const TrickCategory = ({cat}) => {
                 ))}
             </div>
         </div>
-        <Footer></Footer>
     </>
     )
 }

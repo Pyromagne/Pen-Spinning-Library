@@ -5,11 +5,6 @@ import Footer from "../components/Footer";
 const Tutorial = () => {
     return(
         <>
-        <Navbar></Navbar>
-        <div>
-            
-        </div>
-        <Footer></Footer>
         </>
     )
 }
