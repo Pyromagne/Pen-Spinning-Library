@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
-import Tutorial from './pages/Tutorial';
+import Guide from './pages/Guides';
 import TrickList from './pages/TrickList';
 import TrickTutorial from './pages/TrickTutorial';
 import TrickMenu from './pages/TrickMenu';
@@ -22,7 +22,7 @@ function App() {
     <Navbar isHome={isHome}/>
     <Routes>
       <Route index element={<Home />} />
-      <Route path="tutorial" element={<Tutorial />}/>
+      <Route path="guide" element={<Guide />}/>
       <Route path="tricks" element={<TrickMenu />}/>
 
       {Data.trickCategoryL.map((cat, index) => (
@@ -46,10 +46,6 @@ function App() {
       {pass.map((trick, index) =>(
         <Route path={`/tutorial/${trick.name}`} key={index} element={<TrickTutorial trick={trick}/>}/>
       ))}
-
-      {/*
-        //TODO END 
-      */}
 
       <Route path="*" element={<Home />}/>
 
