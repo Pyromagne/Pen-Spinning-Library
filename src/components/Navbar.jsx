@@ -30,7 +30,7 @@ const Navbar = ({isHome = false}) => {
     return(
         <div className={`top-0 left-0 w-full flex py-4 justify-between items-center z-10 ${ isHome ? 'bg-transparent absolute' : 'bg-black relative'}`}>
             <span className="md:ml-20 ml-5">
-                <Link href="/home" sx={linkStyle}>PEN SPINNING LIBRARY</Link>
+                <Link rel="noopener" href="/home" sx={linkStyle}>PEN SPINNING LIBRARY</Link>
             </span>
             <span className="md:mr-20 mr-5 md:hidden text-white inline">
                 <SlMenu onClick={() => setActive((prevActive) => !prevActive)}/>

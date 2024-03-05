@@ -22,8 +22,8 @@ function App() {
     <Navbar isHome={isHome}/>
     <Routes>
       <Route index element={<Home />} />
-      <Route path="guide" element={<Guide />}/>
-      <Route path="tricks" element={<TrickMenu />}/>
+      <Route path="/guide" element={<Guide />}/>
+      <Route path="/tricks" element={<TrickMenu />}/>
 
       {Data.trickCategoryL.map((cat, index) => (
         <Route path={`/tricks/${cat}`} key={index} element={<TrickList cat={cat}/>}/>
