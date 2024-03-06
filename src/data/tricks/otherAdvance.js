@@ -1,6 +1,13 @@
 const cat = 'other & advance';
 const cat1 = 'other';
 const cat2 = 'advance';
+
+export const shadowData = {
+    name: 'shadow',
+    category: cat1,
+    diff: 'b',
+};
+
 export const armRollData = {
     name: 'arm roll',
     category: cat1,
@@ -57,6 +64,7 @@ export const ayatoriData = {
 
 const otherAdvance = [
     cat,
+    shadowData,
     armRollData,
     windshieldData,
     twistedCobraBiteData,

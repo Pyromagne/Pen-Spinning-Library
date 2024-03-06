@@ -17,8 +17,8 @@ export const sonicData = {
     tAuthor : [auth1,_auth1],
     tAlt : [
         ['https://youtu.be/zducgDQPwl4?list=PLkjj8ogaxbBWNubdTZhoGLzytgCeGWLU5', 'Eso (Lefty)'],
-        ['https://www.youtube.com/watch?v=lNeTo-uUd2k',auth2],
-        ['https://www.youtube.com/watch?v=UQi5Atd-Gn0&t=2s',auth3]
+        ['https://www.youtube.com/watch?v=UQi5Atd-Gn0&t=2',auth2],
+        ['https://www.youtube.com/watch?v=lNeTo-uUd2k',auth3]
     ],
 };
 

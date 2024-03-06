@@ -1,7 +1,5 @@
 import { React, useEffect } from "react";
 import { Typography } from "@mui/material";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import * as Data from "../data/tricks";
 import { useNavigate } from "react-router-dom";
 import DiffChip from "../components/DiffChip";

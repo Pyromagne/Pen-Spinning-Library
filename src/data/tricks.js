@@ -14,4 +14,4 @@ export const wipers = ['wiper','infinity','multiple infinity','infinity reverse'
 
 export const aerial = ['thumb snap','sonic release','levitator','infinity release','toss aerial','leigun','bak riser','snap flip','bounce'];
 
-export const otheradvance = ['arm roll','windshield','twisted cobra bite','swivel','spread','pun kan','hai tua','double hai tua','ayatori'];
+export const otheradvance = ['shadow','arm roll','windshield','twisted cobra bite','swivel','spread','pun kan','hai tua','double hai tua','ayatori'];
