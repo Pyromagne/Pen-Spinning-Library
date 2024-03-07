@@ -12,9 +12,12 @@ const linkStyle = {
     display: 'flex',
     justifyContent : 'center',
     alignItems : 'center',
+    paddingLeft : '20px',
+    paddingRight : '20px',
+    
     "&:hover": {
         backgroundColor : 'gray',
-      },
+    },
 }
 
 const logoStyle = {
@@ -24,15 +27,14 @@ const logoStyle = {
 }
 
 const Footer = () => {
-
     return(
         <div className="w-full p-4 flex flex-col justify-around items-center bg-white mt-10 gap-4">
-            <div className="w-full hidden md:flex md:flex-row flex-col justify-around items-center">
-                <div className="md:w-1/4 w-full h-44 flex flex-col md:justify-between justify-center items-center md:items-start gap-4">
+            <div className="w-full hidden md:flex md:flex-row flex-col justify-around items-end">
+                <div className="md:w-1/4 w-full h-22 flex flex-col md:justify-between justify-center items-center md:items-start gap-4">
                     <img src={logo} width="48px" />
                     <Link rel="noopener" href="/home" sx={logoStyle}>PEN SPINNING LIBRARY</Link>
                 </div>
-                <div className="md:w-1/4 h-44 w-full md:flex md:flex-col grid grid-cols-2 justify-between">
+                <div className="w-auto md:flex md:flex-row gap-2 grid grid-cols-2 justify-between">
                     <Link rel="noopener" href="/home" sx={linkStyle}>Home</Link>
                     <Link rel="noopener" href="/guide" sx={linkStyle}>Guides</Link>
                     <Link rel="noopener" href="/tricks" sx={linkStyle}>Tricks</Link>
