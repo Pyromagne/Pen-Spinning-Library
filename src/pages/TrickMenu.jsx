@@ -1,17 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Card, Typography } from "@mui/material";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import * as Data from "../data/tricks";
 import {svg, getRandomSvg} from "../assets/svgs/svg";
 import randomColor from "randomcolor";
 import { useNavigate } from "react-router-dom";
+import { useStateContext } from "../context/contextProvider";
 
-const createCardStyle = () => {
-
+const createCardStyle = (isMobile) => {
     const cardStyles = {
-        width:'330px',
-        height: '230px',
+        width: isMobile ? '80%' : '330px',
+        height: isMobile ? '75px' : '230px',
         margin: '20px',
         border: 'none',
         boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
@@ -31,6 +29,7 @@ const createCardStyle = () => {
 const Trick = () => {
 
     const navigate = useNavigate();
+    const { isMobile } = useStateContext();
 
     const handleCategoryClick = (cat) => {
         navigate(`/tricks/${cat}`);
@@ -40,11 +39,11 @@ const Trick = () => {
         <>
         <div className="flex w-full h-full mt-20 justify-center items-center flex-col">
         <Typography variant="h4" className="capitalize">Category</Typography>
-            <div className="w-4/5 flex flex-wrap justify-center">
+            <div className="md:w-4/5 w-full flex flex-wrap justify-center">
                 {Data.trickCategoryL.map((trick, index) => (
-                    <Card key={index} variant="outlined" sx={createCardStyle} onClick={() => handleCategoryClick(trick)}                    >
-                    <div className="w-full h-20 bg-white py-4">
-                        <p className="capitalize text-center text-3xl">{trick}</p>
+                    <Card key={index} variant="outlined" sx={createCardStyle(isMobile)} onClick={() => handleCategoryClick(trick)}                    >
+                    <div className="w-full h-20 py-4">
+                        <p className="capitalize text-center text-3xl text-white text-border-black-2">{trick}</p>
                     </div>
                     </Card>
                 ))}

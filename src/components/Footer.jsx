@@ -50,9 +50,9 @@ const Footer = () => {
 
 export default Footer;
 
-{/* <span className="flex justify-center items-center gap-2">
+/* <span className="flex justify-center items-center gap-2">
     <p>Powered by Render</p>
     <SiRender />
     <p>Powered by</p>
     <SiGithubpages/>
-</span> */}
+</span> */

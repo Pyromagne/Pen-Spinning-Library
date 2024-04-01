@@ -12,7 +12,7 @@ const TrickTutorial = ({trick}) => {
             <div className="w-11/12 flex flex-col gap-2">
                 <div className="justify-self-start md:w-2/3 w-full">
                     {(!trick.tLink|| trick.tLink.length === 0) ? (
-                        <p className=" opacity-50 bg-black text-white capitalize text-center py-20 rounded-xl">no video tutorial</p>
+                        <p className=" opacity-50 bg-black text-white capitalize text-center py-20 rounded-xl">no video tutorial available</p>
                         ) : (
                         <ResponsiveYoutube videoId={trick.tLink} />
                     )}
@@ -31,7 +31,7 @@ const TrickTutorial = ({trick}) => {
                     <p className="text-xl mt-5">Alternative Tutorials</p>
 
                     {(!trick.tAlt || trick.tAlt.length === 0)  ? (
-                        <p className=" opacity-50 bg-black text-white capitalize text-center rounded-md">no alternative tutorial</p>
+                        <p className=" opacity-50 bg-black text-white capitalize text-center rounded-md">no alternative tutorials available</p>
                         ) : (
                         <div className="flex flex-col items-start">
                         {trick.tAlt.map((item, index) => (

@@ -4,6 +4,7 @@ import { Chip } from "@mui/material";
 const beginnerStyle = {
     color: 'RGB(80, 250, 123)',
     borderColor: 'RGB(80, 250, 123)',
+    backgroundColor: "black",
     fontWeight: 'bold',
     borderWidth: '2px',
   };
@@ -11,6 +12,7 @@ const beginnerStyle = {
   const normalStyle = {
     color: 'RGB(139, 233, 253)',
     borderColor: 'RGB(139, 233, 253)',
+    backgroundColor: "black",
     fontWeight: 'bold',
     borderWidth: '2px',
   };
@@ -18,6 +20,7 @@ const beginnerStyle = {
   const hardStyle = {
     color: 'RGB(255, 85, 85)',
     borderColor: 'RGB(255, 85, 85)',
+    backgroundColor: "black",
     fontWeight: 'bold',
     borderWidth: '2px',
   };
