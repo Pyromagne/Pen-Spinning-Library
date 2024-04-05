@@ -2,7 +2,7 @@ import { React, useEffect } from "react";
 import { Typography } from "@mui/material";
 import * as Data from "../data/tricks";
 import { useNavigate } from "react-router-dom";
-import DiffChip from "../components/DiffChip";
+import DiffChip from "../components/DifficultyChip";
 import sonic from "../data/tricks/sonicsData";
 import charge from "../data/tricks/chargesData";
 import pass from "../data/tricks/passesData";
@@ -16,31 +16,23 @@ const TrickCategory = ({cat}) => {
 
     let category;
 
-    if(cat === 'sonics') {
-        category = sonic;
+    const categoryMap = {
+        sonics: sonic,
+        charges: charge,
+        passes: pass,
+        arounds: around,
+        spins: spin,
+        wipers: wiper,
+        aerials: aerial,
+        'other & advance': otherAdvance
+      };
+    
+    for (const categoryItem of Data.trickCategoryList) {
+        if (cat === categoryItem) {
+          category = categoryMap[categoryItem];
+          break;
+        }
     }
-    else if(cat === 'charges') {
-        category = charge;
-    }
-    else if(cat === 'passes') {
-        category = pass;
-    }
-    else if(cat === 'arounds') {
-        category = around;
-    }
-    else if (cat === 'spins') {
-        category = spin;
-    }
-    else if (cat === 'wipers') {
-        category = wiper;
-    }
-    else if (cat === 'aerials') {
-        category = aerial;
-    }
-    else if (cat === 'other & advance') {
-        category = otherAdvance;
-    }
-
 
     const navigate = useNavigate();
 
@@ -66,7 +58,7 @@ const TrickCategory = ({cat}) => {
                         <p className="capitalize">{trick.name}</p>
                         <DiffChip diff={trick.diff} />
                     </div>
-                ))}
+                ))} 
             </div>
         </div>
     </>

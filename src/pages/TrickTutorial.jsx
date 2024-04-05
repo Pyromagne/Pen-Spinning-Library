@@ -2,7 +2,7 @@ import {React, useNavigate} from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ResponsiveYoutube from "../components/ResponsiveYoutube";
-import DiffChip from "../components/DiffChip";
+import DiffChip from "../components/DifficultyChip";
 
 const TrickTutorial = ({trick}) => {    
 

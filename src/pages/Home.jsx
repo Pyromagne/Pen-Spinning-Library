@@ -12,10 +12,14 @@ const Home = () => {
 
     const {setIsHome} = useStateContext(false);
 
+    const terminologiesMap = Desc.terminologies.map((term, index) => (
+        <li key={index} className="text-justify text-xl">{term}</li>
+    ));
+
     useEffect(() => {
         setIsHome(true);
         return () => setIsHome(false);
-      }, []);
+    }, []);
 
     return(
         <>
@@ -44,17 +48,9 @@ const Home = () => {
                         <img src={fs} alt="Penspinning_slots.jpg" className="w-full md:w-1/3 rounded-md"/>
                     </div>
 
-                    <Typography variant="h5" className="uppercase">Terminology</Typography>
+                    <Typography variant="h5" className="uppercase">Terminologies</Typography>
                     <ul className="list-disc">
-                        <li className="text-justify text-xl">{Desc.t1}</li>
-                        <li className="text-justify text-xl">{Desc.t2}</li>
-                        <li className="text-justify text-xl">{Desc.t3}</li>
-                        <li className="text-justify text-xl">{Desc.t4}</li>
-                        <li className="text-justify text-xl">{Desc.t5}</li>
-                        <li className="text-justify text-xl">{Desc.t6}</li>
-                        <li className="text-justify text-xl">{Desc.t7}</li>
-                        <li className="text-justify text-xl">{Desc.t8}</li>
-                        <li className="text-justify text-xl">{Desc.t9}</li>
+                        {terminologiesMap}
                     </ul>
                     <Typography variant="h5" className=" text-center">Check this Epic Pen Spinning video by Kuma Films!</Typography>
                     <ResponsiveYoutube videoId={videoId}/>
