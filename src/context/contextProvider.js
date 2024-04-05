@@ -3,6 +3,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 const StateContext = createContext();
 
 export const ContextProvider = ({ children }) => {
+    const [isDark, setIsDark] = useState(false);
     const [isHome, setIsHome] = useState(false);
     const [isMobile, setIsMobile] = useState(
         window.innerWidth <= 768 && window.innerHeight <= 1024
@@ -25,7 +26,11 @@ export const ContextProvider = ({ children }) => {
             value={{
                 isHome,
                 setIsHome,
-                isMobile
+
+                isMobile,
+                
+                isDark,
+                setIsDark,
             }}
         >
             {children}

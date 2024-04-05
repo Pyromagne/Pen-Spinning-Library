@@ -21,11 +21,12 @@ import { useStateContext } from './context/contextProvider';
 function App() {
 
   const {isHome} = useStateContext();
-
+  const {isDark} = useStateContext();
+  
   return (
     <>
       <Navbar isHome={isHome}/>
-      <div className=' flex-grow'>
+      <div className={`flex-grow ${isDark ? 'dark-mode' : 'light-mode'}`}>
         <Routes>
           <Route index element={<Home />} />
           <Route path="/guide" element={<Guide />}/>
@@ -76,7 +77,7 @@ function App() {
           <Route path="*" element={<Home />}/>
         </Routes>
       </div>
-      <Footer />
+      <Footer/>
 
   </>
   );

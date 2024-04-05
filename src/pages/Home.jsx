@@ -1,8 +1,6 @@
 import {React, useEffect} from "react"
 import { Typography } from "@mui/material";
-import Navbar from "../components/Navbar";
 import ResponsiveYoutube from "../components/ResponsiveYoutube";
-import Footer from "../components/Footer";
 import * as Desc from "../data/desc";
 import fs from "../assets/images/Penspinning_slots.jpg";
 import {useStateContext} from "../context/contextProvider";
@@ -45,7 +43,7 @@ const Home = () => {
                         <p className="text-justify text-xl">
                             {Desc.fingerSlots}
                         </p>
-                        <img src={fs} alt="Penspinning_slots.jpg" className="w-full md:w-1/3 rounded-md"/>
+                        <img src={fs} alt="Penspinning_slots.jpg" className="w-full md:w-96 rounded-md"/>
                     </div>
 
                     <Typography variant="h5" className="uppercase">Terminologies</Typography>
@@ -53,7 +51,9 @@ const Home = () => {
                         {terminologiesMap}
                     </ul>
                     <Typography variant="h5" className=" text-center">Check this Epic Pen Spinning video by Kuma Films!</Typography>
-                    <ResponsiveYoutube videoId={videoId}/>
+                    <div className="yt-div-home-resp-class">
+                        <ResponsiveYoutube videoId={videoId}/>
+                    </div>
                 </div>
             </div>
         </>

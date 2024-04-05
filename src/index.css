@@ -7,7 +7,7 @@
 } */
 
 html{
-  @apply hideout
+  overflow-y: scroll;
 }
 
 a {
@@ -62,4 +62,26 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .text-border-black-2{
   text-shadow: -2px -2px 0 black,-2px -1px 0 black,-2px 0px 0 black,-2px 1px 0 black,-2px 2px 0 black,-1px -2px 0 black,-1px -1px 0 black,-1px 0px 0 black,-1px 1px 0 black,-1px 2px 0 black,0px -2px 0 black,0px -1px 0 black,0px 0px 0 black,0px 1px 0 black,0px 2px 0 black,1px -2px 0 black,1px -1px 0 black,1px 0px 0 black,1px 1px 0 black,1px 2px 0 black,2px -2px 0 black,2px -1px 0 black,2px 0px 0 black,2px 1px 0 black,2px 2px 0 black
+}
+
+.yt-div-home-resp-class{
+  width: 696px;
+}
+
+@media (max-width: 768px) {
+  .yt-div-home-resp-class{
+    width: 100%;
+  }
+}
+
+.dark-mode{
+  @apply hideout-dark;
+  color: white;
+  transition: 0.5s;
+}
+
+.light-mode{
+  @apply hideout;
+  color: black;
+  transition: 0.5s;
 }

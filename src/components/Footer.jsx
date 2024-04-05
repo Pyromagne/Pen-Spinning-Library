@@ -2,33 +2,36 @@ import {React} from "react";
 import { Link } from "@mui/material";
 import { SiRender, SiGithubpages } from "react-icons/si";
 import logo from "../assets/images/android-chrome-192x192.png"
-
-const linkStyle = {
-    color : 'black',
-    textDecoration : 'none',
-    fontWeight : '500',
-    textAlign : 'center',  
-    transition: '0.3s',
-    display: 'flex',
-    justifyContent : 'center',
-    alignItems : 'center',
-    paddingLeft : '20px',
-    paddingRight : '20px',
-    
-    "&:hover": {
-        backgroundColor : 'gray',
-    },
-}
-
-const logoStyle = {
-    color : 'black',
-    textDecoration : 'none',
-    fontWeight : '500',
-}
+import { useStateContext } from "../context/contextProvider";
 
 const Footer = () => {
+
+    const {isDark} = useStateContext();
+
+    const linkStyle = {
+        color : isDark ? 'white' : 'black',
+        textDecoration : 'none',
+        fontWeight : '500',
+        textAlign : 'center',  
+        transition: '0.3s',
+        display: 'flex',
+        justifyContent : 'center',
+        alignItems : 'center',
+        paddingLeft : '20px',
+        paddingRight : '20px',
+        
+        "&:hover": {
+            backgroundColor : 'gray',
+        },
+    }
+    
+    const logoStyle = {
+        color : isDark ? 'white' : 'black',
+        textDecoration : 'none',
+        fontWeight : '500',
+    }
     return(
-        <div className="w-full p-4 flex flex-col justify-around items-center bg-white mt-10 gap-4">
+        <div className={`w-full p-4 flex flex-col justify-around items-center pt-10 gap-4 ${isDark ? 'dark-mode': 'light-mode'}`}>
             <div className="w-full hidden md:flex md:flex-row flex-col justify-around items-end">
                 <div className="md:w-1/4 w-full h-22 flex flex-col md:justify-between justify-center items-center md:items-start gap-4">
                     <img src={logo} width="48px" />
