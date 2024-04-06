@@ -1,7 +1,7 @@
 import {React, useEffect} from "react"
 import { Typography } from "@mui/material";
 import ResponsiveYoutube from "../components/ResponsiveYoutube";
-import * as Desc from "../data/desc";
+import * as Desc from "../data/penspinningData";
 import fs from "../assets/images/Penspinning_slots.jpg";
 import {useStateContext} from "../context/contextProvider";
 

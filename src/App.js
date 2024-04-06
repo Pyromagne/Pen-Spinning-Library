@@ -5,6 +5,7 @@ import Guide from './pages/Guides';
 import TrickList from './pages/TrickList';
 import TrickTutorial from './pages/TrickTutorial';
 import TrickMenu from './pages/TrickMenu';
+import About from './pages/About';
 import * as Data from "./data/tricks";
 import sonic from './data/tricks/sonicsData';
 import charge from './data/tricks/chargesData';
@@ -31,6 +32,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/guide" element={<Guide />}/>
           <Route path="/tricks" element={<TrickMenu />}/>
+          <Route path="/about" element={<About />}/>
 
           {Data.trickCategoryList.map((cat, index) => (
             <Route path={`/tricks/${cat}`} key={index} element={<TrickList cat={cat}/>}/>
