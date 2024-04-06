@@ -1,45 +1,51 @@
 import React from "react";
 import { Chip } from "@mui/material";
 
-const beginnerStyle = {
-    color: 'RGB(80, 250, 123)',
-    borderColor: 'RGB(80, 250, 123)',
-    backgroundColor: "black",
-    fontWeight: 'bold',
-    borderWidth: '2px',
-  };
-  
-  const normalStyle = {
-    color: 'RGB(139, 233, 253)',
-    borderColor: 'RGB(139, 233, 253)',
-    backgroundColor: "black",
-    fontWeight: 'bold',
-    borderWidth: '2px',
-  };
-  
-  const hardStyle = {
-    color: 'RGB(255, 85, 85)',
-    borderColor: 'RGB(255, 85, 85)',
-    backgroundColor: "black",
-    fontWeight: 'bold',
-    borderWidth: '2px',
-  };
+  const difficultyData = [
+    {
+      level: 'a',
+      label: 'Easy',
+      style: {
+        color: 'RGB(80, 250, 123)',
+        borderColor: 'RGB(80, 250, 123)',
+        backgroundColor: "black",
+        fontWeight: 'bold',
+        borderWidth: '2px',
+      }
+    },
+    {
+      level: 'b',
+      label: 'Normal',
+      style: {
+        color: 'RGB(139, 233, 253)',
+        borderColor: 'RGB(139, 233, 253)',
+        backgroundColor: "black",
+        fontWeight: 'bold',
+        borderWidth: '2px',
+      }
+    },
+    {
+      level: 'c',
+      label: 'Hard',
+      style: {
+        color: 'RGB(255, 85, 85)',
+        borderColor: 'RGB(255, 85, 85)',
+        backgroundColor: "black",
+        fontWeight: 'bold',
+        borderWidth: '2px',
+      }
+    }
+  ]
 
 const DiffChip = ({diff}) => {
     let  chipStyle;
     let label;
 
-    if (diff === 'a') {
-        chipStyle = beginnerStyle;
-        label = 'Easy';
-    }
-    else if (diff === 'b') {
-        chipStyle = normalStyle;
-        label = 'Normal';
-    }
-    else if (diff === 'c') {
-        chipStyle = hardStyle;
-        label = 'Hard';
+    for(const difficultyItem of difficultyData) {
+      if(diff === difficultyItem.level){
+        chipStyle = difficultyItem.style;
+        label = difficultyItem.label;
+      }
     }
 
     return <Chip variant="outlined" label={label} sx={chipStyle} />;

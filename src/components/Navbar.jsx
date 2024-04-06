@@ -6,22 +6,44 @@ import { useNavigate } from "react-router-dom";
 import { useStateContext } from "../context/contextProvider";
 
 const navbarStyle = {
-    color : 'white',
+    color: 'white',
     borderRadius: 50,
 }
 
 const linkStyle = {
-    color : 'white',
+    color: 'white',
     textDecoration : 'none',
 }
 
 const boxButton = {
-    color : 'white',
+    color: 'white',
     borderRadius: 50,
-    padding : '5px',
-    borderRadius : 50,
+    padding: '5px',
     backgroundColor : 'blue',
 }
+
+export const navbarLink = [
+    {
+        name: "Home",
+        navLink: "/home"
+    },
+    {
+        name: "Guide",
+        navLink: "/guide"
+    },
+    {
+        name: "Tricks",
+        navLink: "/tricks"
+    },
+    {
+        name: "Mods",
+        navLink: "/mods"
+    },
+    {
+        name: "About",
+        navLink: "/about"
+    }
+]
 
 
 const Navbar = ({isHome = false}) => {
@@ -29,16 +51,7 @@ const Navbar = ({isHome = false}) => {
 
     const [active, setActive] = useState(false);
     const navigate = useNavigate();
-
-    const handleHomeClick = () =>{
-        navigate("/home");
-    }
-    const handleTutorialClick = () =>{
-        navigate("/guide");
-    }
-    const handleTrickClick = () =>{
-        navigate("/tricks");
-    }
+    
     const handleTheme = () =>{
         setIsDark((prevTheme) => !prevTheme)
     }
@@ -62,19 +75,15 @@ const Navbar = ({isHome = false}) => {
                 </span>
             </span>
             <div className={`w-full absolute top-14 left-0 md:hidden ${active ? 'flex' : 'hidden'} bg-black flex-col justify-center items-center gap-4`}>
-                <Button sx={navbarStyle} variant="text" onClick={handleHomeClick} className="w-full">Home</Button>
-                <Button sx={navbarStyle} variant="text" onClick={handleTutorialClick} className="w-full">Guides</Button>
-                <Button sx={navbarStyle} variant="text" onClick={handleTrickClick} className="w-full">Tricks</Button>
-                <Button sx={navbarStyle} variant="text" className="w-full">Mods</Button>
-                <Button sx={navbarStyle} variant="text" className="w-full">About</Button>
+                {navbarLink.map((link, index) =>(
+                    <Button key={index} sx={navbarStyle} variant="text" className="w-full" onClick={() => navigate(link.navLink)}>{link.name}</Button>
+                ))}
             </div>
 
             <div className="mr-20 gap-x-4 md:flex hidden">
-                <Button sx={navbarStyle} variant="text" onClick={handleHomeClick}>Home</Button>
-                <Button sx={navbarStyle} variant="text" onClick={handleTutorialClick}>Guides</Button>
-                <Button sx={navbarStyle} variant="text" onClick={handleTrickClick} >Tricks</Button>
-                <Button sx={navbarStyle} variant="text">Mods</Button>
-                <Button sx={navbarStyle} variant="text">About</Button>
+                {navbarLink.map((link, index) =>(
+                    <Button key={index} sx={navbarStyle} variant="text" onClick={() => navigate(link.navLink)}>{link.name}</Button>
+                ))}
                 <Button sx={navbarStyle} onClick={handleTheme}>
                     {handleThemeIcon(isDark)}
                 </Button>

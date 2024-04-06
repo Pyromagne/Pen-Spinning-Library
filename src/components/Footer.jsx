@@ -3,6 +3,7 @@ import { Link } from "@mui/material";
 import { SiRender, SiGithubpages } from "react-icons/si";
 import logo from "../assets/images/android-chrome-192x192.png"
 import { useStateContext } from "../context/contextProvider";
+import { navbarLink } from "./Navbar";
 
 const Footer = () => {
 
@@ -30,6 +31,7 @@ const Footer = () => {
         textDecoration : 'none',
         fontWeight : '500',
     }
+    
     return(
         <div className={`w-full p-4 flex flex-col justify-around items-center pt-10 gap-4 ${isDark ? 'dark-mode': 'light-mode'}`}>
             <div className="w-full hidden md:flex md:flex-row flex-col justify-around items-end">
@@ -38,11 +40,9 @@ const Footer = () => {
                     <Link rel="noopener" href="/home" sx={logoStyle}>PEN SPINNING LIBRARY</Link>
                 </div>
                 <div className="w-auto md:flex md:flex-row gap-2 grid grid-cols-2 justify-between">
-                    <Link rel="noopener" href="/home" sx={linkStyle}>Home</Link>
-                    <Link rel="noopener" href="/guide" sx={linkStyle}>Guides</Link>
-                    <Link rel="noopener" href="/tricks" sx={linkStyle}>Tricks</Link>
-                    <Link rel="noopener" href="/home" sx={linkStyle}>Mods</Link>
-                    <Link rel="noopener" href="/home" sx={linkStyle}>About</Link>
+                    {navbarLink.map((link, index) =>(
+                        <Link key={index} rel="noopener" href={link.navLink} sx={linkStyle}>{link.name}</Link>
+                    ))}
                 </div>
             </div>
             <hr className="w-full border-gray-400"/>
