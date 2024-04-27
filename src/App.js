@@ -29,7 +29,7 @@ function App() {
       <Navbar isHome={isHome}/>
       <div className={`flex-grow ${isDark ? 'dark-mode' : 'light-mode'}`}>
         <Routes>
-          <Route index element={<Home />} />
+          <Route path='/' index element={<Home />} />
           <Route path="/guide" element={<Guide />}/>
           <Route path="/tricks" element={<TrickMenu />}/>
           <Route path="/about" element={<About />}/>

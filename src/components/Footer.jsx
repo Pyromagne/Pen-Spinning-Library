@@ -1,6 +1,5 @@
 import {React} from "react";
 import { Link } from "@mui/material";
-import { SiRender, SiGithubpages } from "react-icons/si";
 import logo from "../assets/images/android-chrome-192x192.png"
 import { useStateContext } from "../context/contextProvider";
 import { navbarLink } from "./Navbar";
@@ -13,16 +12,16 @@ const Footer = () => {
         color : isDark ? 'white' : 'black',
         textDecoration : 'none',
         fontWeight : '500',
-        textAlign : 'center',  
-        transition: '0.3s',
+        textAlign : 'center',
         display: 'flex',
         justifyContent : 'center',
         alignItems : 'center',
         paddingLeft : '20px',
         paddingRight : '20px',
+        borderRadius : 50,
         
         "&:hover": {
-            backgroundColor : 'gray',
+            outline: '2px solid black',
         },
     }
     
@@ -37,11 +36,11 @@ const Footer = () => {
             <div className="w-full hidden md:flex md:flex-row flex-col justify-around items-end">
                 <div className="md:w-1/4 w-full h-22 flex flex-col md:justify-between justify-center items-center md:items-start gap-4">
                     <img src={logo} width="48px" />
-                    <Link rel="noopener" href="/home" sx={logoStyle}>PEN SPINNING LIBRARY</Link>
+                    <Link rel="noopener" href="/" sx={logoStyle}>PEN SPINNING LIBRARY</Link>
                 </div>
                 <div className="w-auto md:flex md:flex-row gap-2 grid grid-cols-2 justify-between">
                     {navbarLink.map((link, index) =>(
-                        <Link key={index} rel="noopener" href={link.navLink} sx={linkStyle}>{link.name}</Link>
+                        <Link key={index} rel="noopener" href={link.href} sx={linkStyle}>{link.name}</Link>
                     ))}
                 </div>
             </div>

@@ -26,7 +26,7 @@ const Home = () => {
                     <p className="text-5xl text-white text-center">PEN SPINNING LIBRARY</p>
                 </div>  
 
-                <div className="flex flex-col w-4/5 justify-center items-center gap-10">
+                <div className="flex flex-col w-4/5 justify-center items-center gap-10 pb-4">
                     <Typography variant="h4" className="uppercase">What is Penspinning?</Typography>
                     <p className="text-justify md:text-2xl text-xl">
                         {Desc.what}
