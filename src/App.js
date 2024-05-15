@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import Guide from './pages/Guides';
+import Mods from './pages/Mods';
 import TrickList from './pages/TrickList';
 import TrickTutorial from './pages/TrickTutorial';
 import TrickMenu from './pages/TrickMenu';
@@ -32,6 +33,7 @@ function App() {
           <Route path='/' index element={<Home />} />
           <Route path="/guide" element={<Guide />}/>
           <Route path="/tricks" element={<TrickMenu />}/>
+          <Route path="/mods" element={<Mods />}/>
           <Route path="/about" element={<About />}/>
 
           {Data.trickCategoryList.map((cat, index) => (

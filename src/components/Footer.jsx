@@ -40,7 +40,7 @@ const Footer = () => {
                 </div>
                 <div className="w-auto md:flex md:flex-row gap-2 grid grid-cols-2 justify-between">
                     {navbarLink.map((link, index) =>(
-                        <Link key={index} rel="noopener" href={link.href} sx={linkStyle}>{link.name}</Link>
+                        <Link key={index} rel="noopener" className="duration-0" href={link.href} sx={linkStyle}>{link.name}</Link>
                     ))}
                 </div>
             </div>

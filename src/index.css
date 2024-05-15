@@ -18,6 +18,10 @@
   }
 }
 
+*{
+  @apply duration-300;
+}
+
 /* *{
   outline: 1px solid teal;
 } */
