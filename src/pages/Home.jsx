@@ -45,7 +45,7 @@ const Home = () => {
                             </p>
                             <img src={fs} alt="Penspinning_slots.jpg" className="w-full md:w-96 rounded-md" />
                         </div>
-                        <div className="flex gap-2 flex-col md:w-3/5 w-4/8 ">
+                        <div className="flex gap-2 flex-col md:w-3/6 w-4/8 ">
                             <p className="text-xl md:mt-0 mt-4">Terminologies</p>
                             <ul className="flex gap-1 flex-col">
                                 {terminologiesMap}
