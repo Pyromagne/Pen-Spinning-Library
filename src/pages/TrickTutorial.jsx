@@ -24,7 +24,7 @@ const TrickTutorial = ({trick}) => {
                     {(!trick.tAuthor || !Array.isArray(trick.tAuthor) || trick.tAuthor.length < 2) ? (
                         <p className=" opacity-50 bg-black text-white capitalize text-center rounded-md">video author information not available</p>
                         ) : (
-                        <p className="text-xl mt-5">Video Author: <a href={trick.tAuthor[1]} target="_blank">{trick.tAuthor[0]}</a></p>
+                        <p>Video Author: <a href={trick.tAuthor[1]} target="_blank">{trick.tAuthor[0]}</a></p>
                     )}
                     <p className="text-xl mt-5">Alternative Tutorials</p>
 
@@ -33,7 +33,7 @@ const TrickTutorial = ({trick}) => {
                         ) : (
                         <div className="flex flex-col items-start">
                         {trick.tAlt.map((item, index) => (
-                            <a className="text-xl" key={index} href={item[0]} target="_blank">{item[1]}</a>
+                            <a key={index} href={item[0]} target="_blank">{item[1]}</a>
                         ))}
                         </div>
                     )}

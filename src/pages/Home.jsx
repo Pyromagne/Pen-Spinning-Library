@@ -38,7 +38,7 @@ const Home = () => {
 
                     <p className="text-3xl uppercase">Get Started</p>
                     <p className="italic text-gray-700">Before you start you should know these terminologies, these will be used a lot in your penspinning journey</p>
-                    <div className="flex justify-around md:flex-row flex-col">
+                    <div className="flex justify-between md:flex-row flex-col">
                         <div className="flex gap-10 flex-col md:w-2/5 w-4/8 items-center">
                             <p className="text-justify leading-normal">
                                 {Desc.fingerSlots}
