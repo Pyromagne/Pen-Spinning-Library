@@ -1,3 +1,10 @@
+import authors from "../authData"
+/* tLink: '',
+tAuthor: [],
+tAlt: [
+    [],
+] */
+
 const cat = 'wiper';
 export const wiperData = {
     name: 'wiper',
@@ -9,6 +16,9 @@ export const infinityData = {
     name: 'infinity',
     category: 'wiper',
     diff: 'b',
+    tLink: '6rVxGUchwVY',
+    tAuthor: authors.ktrinh,
+    tAlt: [],
 };
 
 export const infinityReverseData = {
